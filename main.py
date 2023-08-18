@@ -11,8 +11,11 @@ pipe = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="s
 app = FastAPI()
 
 @app.get("/")
+async def welcome():
+    return "welcome"
+
+@app.get("/extract_entities/")
 async def extract_entities(t: str):
-    print(t)
 
     entities = pipe(t)
     entities = [(i, entity["entity_group"], entity["word"]) for i, entity in enumerate(entities)]
