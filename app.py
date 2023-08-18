@@ -12,7 +12,7 @@ app = FastAPI()
 
 @app.get("/")
 async def welcome():
-    return "welcome"
+    return "Welcome to MedTextAPI, follow the instructions on https://github.com/bsenst/MedTextAPI/blob/main/README.md"
 
 @app.get("/extract_entities/")
 async def extract_entities(t: str):
