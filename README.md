@@ -3,7 +3,7 @@
 Deploy the app locally:
 
 ```bash
-uvicorn main:app
+uvicorn app:app
 ```
 
 You can send a medical text to the API through typing the following in your browser if deployed locally:
